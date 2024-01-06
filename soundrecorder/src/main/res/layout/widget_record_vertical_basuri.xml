@@ -74,7 +74,7 @@
                 <ImageView
                     android:layout_width="47dp"
                     android:layout_height="47dp"
-                    android:src="@drawable/ic_record_black"
+                    app:srcCompat="@drawable/ic_record_black"
                     android:contentDescription="@string/app_name"
                     android:textAllCaps="false"
                     android:textColor="@color/white"

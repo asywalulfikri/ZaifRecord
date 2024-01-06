@@ -12,8 +12,8 @@ android {
         minSdk = 19
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
-
+        versionName = "1.2"
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -36,7 +36,8 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.android.support:multidex:1.0.3")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")

@@ -137,6 +137,7 @@ internal class ListingActivity : AppCompatActivity(), AudioRecorderAdapter.OnIte
         nbSelected = 0
     }
 
+    @SuppressLint("MissingSuperCall")
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         val intent = Intent()

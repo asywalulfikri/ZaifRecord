@@ -17,7 +17,7 @@ android {
     defaultConfig {
         minSdk = 19
         multiDexEnabled = true
-
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
         externalNativeBuild {
@@ -40,6 +40,11 @@ android {
                 arg("room.schemaLocation", "$projectDir/schemas")
             }
         }
+
+        lint {
+            baseline = file("lint-baseline.xml")
+        }
+
     }
 
     buildTypes {
@@ -101,6 +106,7 @@ dependencies {
 
     implementation ("org.greenrobot:eventbus:3.3.1")
     implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.android.support:multidex:1.0.3")
 
     implementation ("com.google.firebase:firebase-bom:32.7.0")
     implementation ("org.jetbrains.kotlin:kotlin-bom:1.9.22")

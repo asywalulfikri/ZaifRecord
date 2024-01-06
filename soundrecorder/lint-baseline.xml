@@ -1,0 +1,2352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.2.0)" variant="all" version="8.2.0">
+
+    <issue
+        id="SuspiciousImport"
+        message="Don&apos;t include `android.R` here; use a fully qualified name for each usage instead"
+        errorLine1="import android.R"
+        errorLine2="~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/notes/utils/MyDividerItemDecoration.kt"
+            line="3"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="CustomViewStyleable"
+        message="By convention, the custom view (`MusicAnimationView`) and the declare-styleable (`VusikAttr`) should have the same name (various editor features rely on this convention)"
+        errorLine1="        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.VusikAttr);"
+        errorLine2="                                                                      ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/MusicAnimationView.java"
+            line="88"
+            column="71"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 29 (current min is 19): `android.provider.MediaStore#VOLUME_EXTERNAL_PRIMARY`"
+        errorLine1="        val uri = MediaStore.Video.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)"
+        errorLine2="                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/db/StorageManager.kt"
+            line="18"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="LocaleFolder"
+        message="The locale folder &quot;`id`&quot; should be called &quot;`in`&quot; instead; see the `java.util.Locale` documentation">
+        <location
+            file="src/main/res/values-id"/>
+    </issue>
+
+    <issue
+        id="ShowToast"
+        message="Toast created but not shown: did you forget to call `show()`?"
+        errorLine1="    Toast.makeText(this, message, Toast.LENGTH_SHORT)"
+        errorLine2="    ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/Extensions.kt"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="            var formatter = SimpleDateFormat(&quot;dd_MM_yyyy_HH_mm_ss&quot;)"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/Utils.kt"
+            line="20"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="            var format = SimpleDateFormat(&quot;d MMM, yyyy hh:mm aaa&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/Utils.kt"
+            line="27"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 19)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorGray&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 19)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorBox&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="AppBundleLocaleChanges"
+        message="Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the `bundle` configuration"
+        errorLine1="        configuration.locale = locale"
+        errorLine2="                      ~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/base/BaseActivityWidget.kt"
+            line="505"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="VectorDrawableCompat"
+        message="When using VectorDrawableCompat, you need to use `app:srcCompat`"
+        errorLine1="                    android:src=&quot;@drawable/ic_record_black&quot;"
+        errorLine2="                    ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="77"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;256dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_rectangle_tool.xml"
+            line="3"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="BomWithoutPlatform"
+        message="BOM should be added with a call to platform()"
+        errorLine1="    implementation (&quot;com.google.firebase:firebase-bom:32.7.0&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="111"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="BomWithoutPlatform"
+        message="BOM should be added with a call to platform()"
+        errorLine1="    implementation (&quot;org.jetbrains.kotlin:kotlin-bom:1.9.22&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="112"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.airbnb.android:lottie than 6.0.0 is available: 6.3.0"
+        errorLine1="    implementation (&quot;com.airbnb.android:lottie:6.0.0&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="96"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-runtime than 2.5.2 is available: 2.6.1"
+        errorLine1="    implementation (&quot;androidx.room:room-runtime:2.5.2&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="98"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-compiler than 2.5.2 is available: 2.6.1"
+        errorLine1="    kapt (&quot;androidx.room:room-compiler:2.5.2&quot;)"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="100"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-compiler than 2.5.2 is available: 2.6.1"
+        errorLine1="    kapt(&quot;androidx.room:room-compiler:2.5.2&quot;)"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="101"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-ktx than 2.5.2 is available: 2.6.1"
+        errorLine1="    implementation (&quot;androidx.room:room-ktx:2.5.2&quot;)"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="102"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-compiler than 2.5.2 is available: 2.6.1"
+        errorLine1="    annotationProcessor (&quot;androidx.room:room-compiler:2.5.2&quot;)"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="103"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method FragmentListSong looks like a constructor but is a normal method"
+        errorLine1="    fun FragmentListSong() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/FragmentListSong.kt"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method FragmentSetting looks like a constructor but is a normal method"
+        errorLine1="    fun FragmentSetting() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/FragmentSetting.kt"
+            line="31"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method NoteFragment looks like a constructor but is a normal method"
+        errorLine1="    fun NoteFragment() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/NoteFragment.kt"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method NoteFragmentFirebase looks like a constructor but is a normal method"
+        errorLine1="    fun NoteFragmentFirebase() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/NoteFragmentFirebase.kt"
+            line="46"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentHorizontal looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentHorizontal() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentHorizontal.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentHorizontalBlack looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentHorizontalBlack() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentHorizontalBlack.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentHorizontalNew looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentHorizontalNew() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentHorizontalNew.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentVertical looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentVertical() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentVertical.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentVerticalBasuri looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentVerticalBasuri() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentVerticalBasuri.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NotConstructor"
+        message="Method VoiceRecordFragmentVerticalBlack looks like a constructor but is a normal method"
+        errorLine1="    fun VoiceRecordFragmentVerticalBlack() {"
+        errorLine2="    ^">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/fragment/VoiceRecordFragmentVerticalBlack.kt"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        this(a, maxParticles, a.getResources().getDrawable(drawableRedId), timeToLive, android.R.id.content);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/animation/ParticleSystem.java"
+            line="150"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        this(a, maxParticles, a.getResources().getDrawable(drawableRedId), timeToLive, parentViewId);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/animation/ParticleSystem.java"
+            line="163"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;default_notification_channel_id&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;default_notification_channel_id&quot;>Channel ID&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;colorpicker_dialog_title&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;colorpicker_dialog_title&quot;>Choose the color&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;colorpicker_dialog_cancel&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;colorpicker_dialog_cancel&quot;>CANCEL&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;colorpicker_dialog_ok&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;colorpicker_dialog_ok&quot;>OK&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;please_wait_dialog_default_title&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;please_wait_dialog_default_title&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;please_wait_dialog_default_message&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;please_wait_dialog_default_message&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dialog_maintenance&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Sorry..The application is under maintenance, Please try again later&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dialog_msg_update_app_version&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;dialog_msg_update_app_version&quot;>The new version is available in Play Store, please update your application&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="13"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dialog_msg_update_app&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;dialog_msg_update_app&quot;>Please update your Application&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;lbl_new_note_title&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;lbl_new_note_title&quot;>New Note Song&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;lbl_edit_note_title&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;lbl_edit_note_title&quot;>Edit Note Song&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;cover_song&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;cover_song&quot;>Cover\nSong&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record&quot;>Record&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;text_continue&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;text_continue&quot;>Continue&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record_started&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record_started&quot;>Recorded Started&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record_paused&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record_paused&quot;>Recorded Paused&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record_resumed&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record_resumed&quot;>Recorded Resumed&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record_saved&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record_saved&quot;>Successfully saved the recording&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;record_canceled&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;record_canceled&quot;>The recording has been cancelled&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;no_internet_connection&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;no_internet_connection&quot;>No Internet Connection, Try again&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;device_not_support&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;device_not_support&quot;>Your device not support to record audio&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;allow_permission&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;allow_permission&quot;>Allow Permission in Setting Audio In Setting&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;choose_language&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;choose_language&quot;>Choose Language&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;indonesia&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;indonesia&quot;>Indonesia&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;choose&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;choose&quot;>Choose&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;save&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;save&quot;>Save&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;information&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;information&quot;>Information&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;update&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;update&quot;>Update&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;no&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;no&quot;>No&lt;/string>"
+        errorLine2="            ~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;setting&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;setting&quot;>Setting&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;language&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;language&quot;>Language&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;rate_us&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;rate_us&quot;>Rate Us&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;help_suggest&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;help_suggest&quot;>Help and Suggest&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;share_with_friends&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;share_with_friends&quot;>Share with Friends&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;choose_one&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;choose_one&quot;>Choose One&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;text_video&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;text_video&quot;>Video&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="45"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;please_wait&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;please_wait&quot;>Please Wait&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;loading_audio&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;loading_audio&quot;>Process Loading Audio....&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;title&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;title&quot;>Title&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;write_note_here&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;write_note_here&quot;>Write Note Here&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;search_record&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;search_record&quot;>Search Recorded &lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;delete&quot;>Delete&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;cancel&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;cancel&quot;>Cancel&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;recordings&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;recordings&quot;>Recordings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;saved_recording_ask&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;saved_recording_ask&quot;>Save Recording ?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exit&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;exit&quot;>Exit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;send&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;send&quot;>Send&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;input_message_here&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;input_message_here&quot;>Input Message Here&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;message_cannot_empty&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;message_cannot_empty&quot;>Message Cannot Empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;more_apps&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;more_apps&quot;>More Apps&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;use_note&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;use_note&quot;>Use Note&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;edit_note&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;edit_note&quot;>Edit Note&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_not&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;delete_not&quot;>Delete Note&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;default_language&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;default_language&quot;>Default Language&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;background_color&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;background_color&quot;>Background Color&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;song_volume&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;song_volume&quot;>Song Volume&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;note&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;note&quot;>Note&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;indonesian&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;indonesian&quot;>Indonesian&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="74"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;english&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;english&quot;>English&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;filipino&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;filipino&quot;>Filipino&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="76"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;japanese&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;japanese&quot;>Japanese&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="77"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;korean&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;korean&quot;>Korean&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="78"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;vietnamese&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;vietnamese&quot;>Vietnamese&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;thai&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;thai&quot;>Thai&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;Portuguese&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;Portuguese&quot;>Portuguese&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dutch&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;dutch&quot;>Dutch&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;malay&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;malay&quot;>Malay&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;spanish&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;spanish&quot;>Spanish&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;arabic&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;arabic&quot;>Arabic&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="85"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;download_success&quot; is not translated in &quot;uz&quot; (Uzbek), &quot;si&quot; (Sinhala), &quot;id&quot; (Indonesian)"
+        errorLine1="    &lt;string name=&quot;download_success&quot;>Download Successful, Please Wait 5 Seconds&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/BaseRecyclerViewAdapter.java"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/BaseRecyclerViewAdapter.java"
+            line="41"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="            notifyDataSetChanged();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/HFRecyclerViewAdapter.java"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="            notifyDataSetChanged();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/util/HFRecyclerViewAdapter.java"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        errorLine1="        Cursor cursor = db.rawQuery(selectQuery, null);"
+        errorLine2="                           ~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/notes/DatabaseHelper.java"
+            line="102"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        message="This `ParcelFileDescriptor` should be freed up after use with `#close()`"
+        errorLine1="            return resolver.openFileDescriptor(newFileUri, &quot;rw&quot;)?.fileDescriptor"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/db/StorageManager.kt"
+            line="25"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        errorLine1="        val recordingsCursor = resolver.query("
+        errorLine2="                                        ~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/db/StorageManager.kt"
+            line="47"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`"
+        errorLine1="                    android:layout_weight=&quot;1&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="108"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_centerInParent`"
+        errorLine1="                android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="158"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_centerInParent`"
+        errorLine1="                android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="196"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="    &lt;path android:fillColor=&quot;@android:color/white&quot; android:pathData=&quot;M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z&quot;/>"
+        errorLine2="                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/baseline_settings_245.xml"
+            line="4"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1935 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M2410 4989 c-226 -14 -511 -76 -733 -158 -74 -28 -273 -123 -340 -163 -428 -257 -753 -602 -959 -1018 -81 -164 -114 -248 -160 -405 -70 -235 -97 -430 -98 -687 -1 -620 219 -1182 652 -1668 267 -300 501 -492 758 -624 41 -22 82 -43 90 -47 25 -13 130 -59 136 -59 3 0 20 -6 37 -14 95 -43 314 -103 479 -131 80 -13 155 -16 420 -12 178 2 334 6 348 10 14 4 41 10 60 13 178 32 410 109 610 202 137 64 316 179 455 290 75 61 284 264 332 324 260 321 434 678 508 1043 43 213 48 271 48 495 0 224 -7 305 -48 505 -29 144 -139 477 -205 617 -16 37 -30 69 -30 72 0 6 -79 153 -128 238 -11 20 -38 61 -58 90 -21 29 -47 67 -58 83 -162 233 -459 505 -731 668 -212 128 -538 252 -765 292 -247 44 -429 57 -620 44z m480 -90 c674 -95 1276 -476 1647 -1041 280 -426 422 -962 383 -1444 -23 -282 -86 -540 -190 -779 -18 -43 -114 -223 -145 -274 -91 -148 -180 -260 -317 -398 -114 -115 -158 -150 -67 -52 28 30 61 70 74 89 12 19 32 45 44 57 12 12 21 24 21 27 0 3 19 33 43 68 164 242 291 533 352 808 60 269 60 658 1 960 -15 78 -95 331 -121 385 -9 17 -13 22 -10 12 2 -9 18 -63 34 -120 41 -142 71 -305 76 -417 l5 -95 -15 97 c-33 213 -119 453 -220 610 -29 45 -83 133 -120 194 -227 378 -526 657 -900 840 -704 343 -1530 265 -2162 -204 -114 -85 -331 -303 -416 -417 -199 -270 -324 -561 -384 -895 -33 -187 -37 -480 -9 -655 34 -214 102 -435 183 -600 114 -233 252 -490 304 -570 l59 -90 -109 112 -109 112 45 -82 c55 -100 83 -138 170 -235 260 -290 712 -527 1171 -616 146 -28 209 -36 377 -45 118 -7 119 -7 60 -15 -81 -12 -369 0 -480 19 -152 27 -295 64 -415 107 -626 224 -1134 693 -1382 1278 -87 203 -145 413 -174 630 -18 137 -18 464 0 600 87 643 414 1202 931 1589 506 379 1135 539 1765 450z m-835 -499 c-4 -6 -93 -52 -198 -103 -281 -137 -404 -221 -585 -400 -117 -115 -210 -234 -302 -387 -77 -127 -122 -224 -207 -440 -35 -90 -69 -171 -76 -178 -19 -23 -26 17 -17 104 21 209 135 505 271 705 213 314 603 597 949 690 73 19 175 25 165 9z m712 -4166 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/btn_record.xml"
+            line="15"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1148 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="    &lt;path android:fillColor=&quot;@android:color/white&quot; android:pathData=&quot;M12,5L12,2.21c0,-0.45 -0.54,-0.67 -0.85,-0.35l-3.8,3.79c-0.2,0.2 -0.2,0.51 0,0.71l3.79,3.79c0.32,0.31 0.86,0.09 0.86,-0.36L12,7c3.73,0 6.68,3.42 5.86,7.29 -0.47,2.26 -2.14,3.99 -4.39,4.53 -3.64,0.88 -6.93,-1.6 -7.42,-4.96 -0.06,-0.49 -0.48,-0.86 -0.97,-0.86 -0.6,0 -1.08,0.53 -1,1.13 0.63,4.47 4.94,7.75 9.77,6.67 3.09,-0.69 5.39,-3.08 5.99,-6.19C20.84,9.48 16.94,5 12,5zM10.69,13.9l0.25,-2.17h2.39v0.71h-1.7l-0.11,0.92c0.03,-0.02 0.07,-0.03 0.11,-0.05s0.09,-0.04 0.15,-0.05 0.12,-0.03 0.18,-0.04 0.13,-0.02 0.2,-0.02c0.21,0 0.39,0.03 0.55,0.1s0.3,0.16 0.41,0.28 0.2,0.27 0.25,0.45 0.09,0.38 0.09,0.6c0,0.19 -0.03,0.37 -0.09,0.54s-0.15,0.32 -0.27,0.45 -0.27,0.24 -0.45,0.31 -0.39,0.12 -0.64,0.12c-0.18,0 -0.36,-0.03 -0.53,-0.08s-0.32,-0.14 -0.46,-0.24 -0.24,-0.24 -0.32,-0.39 -0.13,-0.33 -0.13,-0.53h0.84c0.02,0.18 0.08,0.32 0.19,0.41s0.25,0.15 0.42,0.15c0.11,0 0.2,-0.02 0.27,-0.06s0.14,-0.1 0.18,-0.17 0.08,-0.15 0.11,-0.25 0.03,-0.2 0.03,-0.31 -0.01,-0.21 -0.04,-0.31 -0.07,-0.17 -0.13,-0.24 -0.13,-0.12 -0.21,-0.15 -0.19,-0.05 -0.3,-0.05c-0.08,0 -0.15,0.01 -0.2,0.02s-0.11,0.03 -0.15,0.05 -0.08,0.05 -0.12,0.07 -0.07,0.06 -0.1,0.09l-0.67,-0.16z&quot;/>"
+        errorLine2="                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_backward.xml"
+            line="7"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1162 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="    &lt;path android:fillColor=&quot;@android:color/white&quot; android:pathData=&quot;M18.87,13c-0.5,0 -0.91,0.37 -0.98,0.86 -0.48,3.37 -3.77,5.84 -7.42,4.96 -2.25,-0.54 -3.91,-2.27 -4.39,-4.53C5.27,10.42 8.22,7 11.95,7v2.79c0,0.45 0.54,0.67 0.85,0.35l3.79,-3.79c0.2,-0.2 0.2,-0.51 0,-0.71L12.8,1.85c-0.31,-0.31 -0.85,-0.09 -0.85,0.35L11.95,5c-4.94,0 -8.84,4.48 -7.84,9.6 0.6,3.11 2.9,5.5 5.99,6.19 4.83,1.08 9.15,-2.2 9.77,-6.67 0.09,-0.59 -0.4,-1.12 -1,-1.12zM12.43,15.15c-0.05,0.07 -0.11,0.13 -0.18,0.17s-0.17,0.06 -0.27,0.06c-0.17,0 -0.31,-0.05 -0.42,-0.15s-0.17,-0.24 -0.19,-0.41h-0.84c0.01,0.2 0.05,0.37 0.13,0.53s0.19,0.28 0.32,0.39 0.29,0.19 0.46,0.24 0.35,0.08 0.53,0.08c0.24,0 0.46,-0.04 0.64,-0.12s0.33,-0.18 0.45,-0.31 0.21,-0.28 0.27,-0.45 0.09,-0.35 0.09,-0.54c0,-0.22 -0.03,-0.43 -0.09,-0.6s-0.14,-0.33 -0.25,-0.45 -0.25,-0.22 -0.41,-0.28 -0.34,-0.1 -0.55,-0.1c-0.07,0 -0.14,0.01 -0.2,0.02s-0.13,0.02 -0.18,0.04 -0.1,0.03 -0.15,0.05 -0.08,0.04 -0.11,0.05l0.11,-0.92h1.7v-0.71L10.9,11.74l-0.25,2.17 0.67,0.17c0.03,-0.03 0.06,-0.06 0.1,-0.09s0.07,-0.05 0.12,-0.07 0.1,-0.04 0.15,-0.05 0.13,-0.02 0.2,-0.02c0.12,0 0.22,0.02 0.3,0.05s0.16,0.09 0.21,0.15 0.1,0.14 0.13,0.24 0.04,0.19 0.04,0.31 -0.01,0.22 -0.03,0.31 -0.06,0.17 -0.11,0.24z&quot;/>"
+        errorLine2="                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_forward.xml"
+            line="4"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1058 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="          android:pathData=&quot;M120.01,82.62c0,1.43 0,2.85 -0.01,4.28 -0.01,1.2 -0.02,2.4 -0.05,3.6a51.7,51.7 0,0 1,-0.7 7.84,26.18 26.18,0 0,1 -2.49,7.46 25.07,25.07 0,0 1,-4.67 6.35,25.36 25.36,0 0,1 -6.43,4.61 26.93,26.93 0,0 1,-7.54 2.46,53.51 53.51,0 0,1 -7.94,0.69c-5.09,0.06 -6.53,0.06 -7.98,0.06H37.81c-5.55,-0.02 -6.76,-0.03 -7.98,-0.06a53.51,53.51 0,0 1,-7.94 -0.69,26.93 26.93,0 0,1 -7.54,-2.46 25.23,25.23 0,0 1,-11.09 -10.97A26.31,26.31 0,0 1,0.77 98.35a51.7,51.7 0,0 1,-0.7 -7.84C0.04,89.3 0.03,88.1 0.02,86.9c-0.01,-1.43 -0.01,-2.86 -0.01,-4.28v-45.26c0,-1.43 0,-2.86 0.01,-4.28C0.03,31.87 0.04,30.67 0.07,29.47a51.72,51.72 0,0 1,0.7 -7.85A26.3,26.3 0,0 1,3.26 14.16a25.23,25.23 0,0 1,11.09 -10.97A26.93,26.93 0,0 1,21.89 0.74,53.51 53.51,0 0,1 29.83,0.05c5.09,-0.06 6.53,-0.06 7.98,-0.06H81.03l-15.39,0.01 16.58,-0.01c5.54,0.02 6.76,0.03 7.98,0.06a53.51,53.51 0,0 1,7.94 0.69,26.93 26.93,0 0,1 7.54,2.46 25.31,25.31 0,0 1,6.43 4.61,25 25,0 0,1 4.67,6.35 26.17,26.17 0,0 1,2.49 7.46,51.73 51.73,0 0,1 0.7,7.85c0.03,1.2 0.05,2.4 0.05,3.61 0.01,1.42 0.01,2.85 0.01,4.28v45.26Z&quot;/>"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/notes.xml"
+            line="36"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1058 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="          android:pathData=&quot;M120.01,82.62c0,1.43 0,2.85 -0.01,4.28 -0.01,1.2 -0.02,2.4 -0.05,3.6a51.7,51.7 0,0 1,-0.7 7.84,26.18 26.18,0 0,1 -2.49,7.46 25.07,25.07 0,0 1,-4.67 6.35,25.36 25.36,0 0,1 -6.43,4.61 26.93,26.93 0,0 1,-7.54 2.46,53.51 53.51,0 0,1 -7.94,0.69c-5.09,0.06 -6.53,0.06 -7.98,0.06H37.81c-5.55,-0.02 -6.76,-0.03 -7.98,-0.06a53.51,53.51 0,0 1,-7.94 -0.69,26.93 26.93,0 0,1 -7.54,-2.46 25.23,25.23 0,0 1,-11.09 -10.97A26.31,26.31 0,0 1,0.77 98.35a51.7,51.7 0,0 1,-0.7 -7.84C0.04,89.3 0.03,88.1 0.02,86.9c-0.01,-1.43 -0.01,-2.86 -0.01,-4.28v-45.26c0,-1.43 0,-2.86 0.01,-4.28C0.03,31.87 0.04,30.67 0.07,29.47a51.72,51.72 0,0 1,0.7 -7.85A26.3,26.3 0,0 1,3.26 14.16a25.23,25.23 0,0 1,11.09 -10.97A26.93,26.93 0,0 1,21.89 0.74,53.51 53.51,0 0,1 29.83,0.05c5.09,-0.06 6.53,-0.06 7.98,-0.06H81.03l-15.39,0.01 16.58,-0.01c5.54,0.02 6.76,0.03 7.98,0.06a53.51,53.51 0,0 1,7.94 0.69,26.93 26.93,0 0,1 7.54,2.46 25.31,25.31 0,0 1,6.43 4.61,25 25,0 0,1 4.67,6.35 26.17,26.17 0,0 1,2.49 7.46,51.73 51.73,0 0,1 0.7,7.85c0.03,1.2 0.05,2.4 0.05,3.61 0.01,1.42 0.01,2.85 0.01,4.28v45.26Z&quot;/>"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/notes.xml"
+            line="43"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="KaptUsageInsteadOfKsp"
+        message="This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp"
+        errorLine1="    kapt(&quot;androidx.room:room-compiler:2.5.2&quot;)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="101"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="87"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;@color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing_new.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#f8a424` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;#f8a424&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_splash_sdk.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#FFF9AA2D` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;#FFF9AA2D&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet_setting.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;@color/colorPrimary&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet_song.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;@color/colorPrimaryDark&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_setting.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;@color/colorPrimary&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_simple_song.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `?selectableItemBackground` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        errorLine1="    android:background=&quot;?selectableItemBackground&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/itemview_layout.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="15"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert_update.xml"
+            line="16"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_input_email.xml"
+            line="16"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `RelativeLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="        &lt;RelativeLayout"
+        errorLine2="         ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_footer.xml"
+            line="14"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `LinearLayout` parent is unnecessary"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/loading_layout.xml"
+            line="10"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is possibly unnecessary"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal_black.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is possibly unnecessary; transfer the `background` attribute to the other view"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="16"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Lo sentimos... La aplicación está en mantenimiento. Por favor, inténtalo de nuevo más tarde.&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="11"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Pasensya na... Ang aplikasyon ay nasa ilalim ng pagsasaayos. Subukan muli mamaya&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-fil/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>申し訳ありません... アプリはメンテナンス中です。後でもう一度お試しください&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ja/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>죄송합니다... 앱이 유지보수 중입니다. 나중에 다시 시도해 주세요&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ko/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Maaf... Aplikasi dalam proses penyelenggaraan. Sila cuba lagi nanti&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ms/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Sorry... De applicatie is in onderhoud. Probeer het later opnieuw&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-nl/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dialog_maintenance&quot;>Desculpe... O aplicativo está em manutenção. Tente novamente mais tarde&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="12"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;loading_audio&quot;>Procesando carga de audio...&lt;/string>"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="47"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;loading_audio&quot;>オーディオを読み込んでいます...&lt;/string>"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ja/strings.xml"
+            line="48"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/drawable-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/audio_track.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/audio_track.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/audio_track_small.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/audio_track_small.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/error.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/error.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_color.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/ic_color.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_note.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/ic_note.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/info.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/info.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/music_8.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/music_8.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/music_not9.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/music_not9.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/note2.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/note2.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/round.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/round.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/round_black.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/round_black.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/success.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/success.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/warning.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/warning.png"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-hdpi`: confeti2.png, confeti3.png, dust.png, ic_launcher.png, star.png... (2 more)">
+        <location
+            file="src/main/res/drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-xhdpi`: piring.webp (found in drawable-hdpi)">
+        <location
+            file="src/main/res/drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        message="Missing density variation folders in `src/main/res`: drawable-mdpi, drawable-xxhdpi">
+        <location
+            file="src/main/res"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="        &lt;Button"
+        errorLine2="         ~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="37"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="        &lt;Button"
+        errorLine2="         ~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="42"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert_update.xml"
+            line="64"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert_update.xml"
+            line="75"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_input_email.xml"
+            line="60"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_input_email.xml"
+            line="71"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_input_email.xml"
+            line="42"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        message="Avoid using sizes smaller than `11sp`: `8sp`"
+        errorLine1="                    android:textSize=&quot;8sp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="64"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        errorLine1="                android:textSize=&quot;10sp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="183"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ButtonCase"
+        message="The standard Android way to capitalize CANCEL is &quot;Cancel&quot; (tip: use `@android:string/cancel` instead)"
+        errorLine1="    &lt;string name=&quot;colorpicker_dialog_cancel&quot;>CANCEL&lt;/string>"
+        errorLine2="                                             ~~~~~~">
+        <location
+            file="src/main/res/values-en/strings.xml"
+            line="5"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="ButtonCase"
+        message="The standard Android way to capitalize CANCEL is &quot;Cancel&quot; (tip: use `@android:string/cancel` instead)"
+        errorLine1="    &lt;string name=&quot;colorpicker_dialog_cancel&quot;>CANCEL&lt;/string>"
+        errorLine2="                                             ~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="5"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="40"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="46"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="103"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="126"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet_setting.xml"
+            line="56"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="26"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="68"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="80"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert_update.xml"
+            line="22"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_input_email.xml"
+            line="22"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_audio.xml"
+            line="21"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="24"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="30"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;com.google.android.material.floatingactionbutton.FloatingActionButton"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_note.xml"
+            line="35"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/test_aja.xml"
+            line="157"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/test_aja.xml"
+            line="183"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal.xml"
+            line="159"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal.xml"
+            line="185"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal_black.xml"
+            line="157"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal_black.xml"
+            line="183"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="167"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                binding.chip.text = &quot;x $playbackSpeed&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/ui/activity/PlayerActivityWidget.kt"
+            line="134"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search audio record&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Search audio record&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="69"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rename&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Rename&quot;/>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="116"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Delete&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Delete&quot;/>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_listing.xml"
+            line="139"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Announcement&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Announcement&quot;/>"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="43"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;You can choose to record sound only or record sound with the screen&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;You can choose to record sound only or record sound with the screen&quot; />"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="50"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Audio Only&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Audio Only&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="77"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Audio + Screen&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Audio + Screen&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="90"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cover Gendang Koplo&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Cover Gendang Koplo&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="48"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mari Belajar Cover Gendang&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Mari Belajar Cover Gendang&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="56"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TITLE&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;TITLE&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="62"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;17 Februari 2019&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;17 Februari 2019&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/list_item_video.xml"
+            line="69"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;00:00.0&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;00:00.0&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/test_aja.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;00:00.0&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;00:00.0&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal.xml"
+            line="175"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;00:00.0&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;00:00.0&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_horizontal_black.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;00:00.0&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;00:00.0&quot;/>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/widget_record_vertical_basuri.xml"
+            line="186"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`LinearLayout-1` can overlap `@id/btnColor` if LinearLayout-1 grows due to localized text expansion"
+        errorLine1="            &lt;LinearLayout"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bottom_sheet_setting.xml"
+            line="27"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="                    android:paddingStart=&quot;10dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="75"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="                    android:paddingStart=&quot;10dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_alert.xml"
+            line="84"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="            android:paddingStart=&quot;16dp&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/loading_layout.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        if (hasGravity(gravity, Gravity.LEFT)) {"
+        errorLine2="                                        ~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/animation/ParticleSystem.java"
+            line="618"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        else if (hasGravity(gravity, Gravity.RIGHT)) {"
+        errorLine2="                                             ~~~~~">
+        <location
+            file="src/main/java/sound/recorder/widget/animation/ParticleSystem.java"
+            line="622"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignLeft`; already defining `layout_alignStart` with `targetSdkVersion` 19"
+        errorLine1="        android:layout_alignLeft=&quot;@+id/color_palette&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 19"
+        errorLine1="        android:layout_marginLeft=&quot;5dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignRight`; already defining `layout_alignEnd` with `targetSdkVersion` 19"
+        errorLine1="        android:layout_alignRight=&quot;@+id/color_palette&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignLeft`; already defining `layout_alignStart` with `targetSdkVersion` 19"
+        errorLine1="        android:layout_alignLeft=&quot;@+id/color_palette&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/color_palette_layout.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_footer.xml"
+            line="29"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_toRightOf` with `android:layout_toEndOf=&quot;@+id/pb_progress&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_toRightOf=&quot;@+id/pb_progress&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_footer.xml"
+            line="30"
+            column="17"/>
+    </issue>
+
+</issues>
