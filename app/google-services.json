@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074494730919",
+    "project_id": "recording-widget",
+    "storage_bucket": "recording-widget.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074494730919:android:9bef1ada87477b7e9e6182",
+        "android_client_info": {
+          "package_name": "recording.host"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074494730919-9j7cvgjc44bcqs1vndduqd35s14s7qvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzT3O2i2KYRxqmRlb7RtaUN0Ozv-FWM9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074494730919-9j7cvgjc44bcqs1vndduqd35s14s7qvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

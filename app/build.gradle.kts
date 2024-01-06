@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "zaif.record.widget"
+        applicationId = "recording.host"
         minSdk = 19
         targetSdk = 34
         versionCode = 1
