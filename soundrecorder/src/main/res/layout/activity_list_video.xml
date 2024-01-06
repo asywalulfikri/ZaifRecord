@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:id="@+id/nsvForums"
+    android:background="#FFE091"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ivClose"
+            app:srcCompat="@drawable/ic_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/ivClose"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
